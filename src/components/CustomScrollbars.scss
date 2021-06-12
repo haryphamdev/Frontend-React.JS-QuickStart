@@ -1,0 +1,81 @@
+@import "../styles/common.scss";
+
+.custom-scrollbar {
+  .thumb-horizontal {
+    background-color: rgba($bg-scrollbar, 0.4);
+    box-shadow: inset 1px 1px 0 rgba($bg-scrollbar, 0.10), inset 0 -1px 0 rgba($bg-scrollbar, 0.07);
+
+    &:hover {
+      background-color: rgba($bg-scrollbar, 0.8);
+      box-shadow: inset 1px 1px 1px rgba($bg-scrollbar, 0.50);
+    }
+
+    &:active {
+      background-color: rgba($bg-scrollbar, 0.9);
+      box-shadow: inset 1px 1px 3px rgba($bg-scrollbar, 0.6);
+    }
+  }
+
+  .thumb-vertical {
+    background-color: rgba($bg-scrollbar, 0.4);
+    box-shadow: inset 1px 1px 0 rgba($bg-scrollbar, 0.10), inset 0 -1px 0 rgba($bg-scrollbar, 0.07);
+
+    &:hover {
+      background-color: rgba($bg-scrollbar, 0.8);
+      box-shadow: inset 1px 1px 1px rgba($bg-scrollbar, 0.50);
+    }
+
+    &:active {
+      background-color: rgba($bg-scrollbar, 0.9);
+      box-shadow: inset 1px 1px 3px rgba($bg-scrollbar, 0.6);
+    }
+  }
+
+
+  &:hover {
+
+    > .track-horizontal, > .track-vertical {
+      opacity: 1 !important;
+
+      > .thumb-horizontal, > .thumb-vertical {
+        opacity: 1;
+      }
+    }
+  }
+
+  .track-horizontal {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 5px !important;
+    &:hover, &:active {
+      height: 10px !important;
+    }
+  }
+
+  .track-vertical {
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 5px !important;
+    &:hover, &:active {
+      width: 10px !important;
+    }
+  }
+
+  .thumb-horizontal {
+    cursor: pointer;
+    border-radius: 10px;
+    background-clip: padding-box;
+    min-width: 0px;
+
+  }
+
+  .thumb-vertical {
+    cursor: pointer;
+    border-radius: 10px;
+    background-clip: padding-box;
+    min-height: 0px;
+  }
+
+}

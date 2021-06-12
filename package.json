@@ -1,0 +1,59 @@
+{
+  "name": "react-app-hoi-dan-it",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@formatjs/intl-pluralrules": "^3.5.6",
+    "@formatjs/intl-relativetimeformat": "^7.3.6",
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.1",
+    "connected-react-router": "^6.9.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.0",
+    "node-sass": "^6.0.0",
+    "react": "^17.0.2",
+    "react-auth-wrapper": "^1.0.0",
+    "react-autosuggest": "^10.1.0",
+    "react-bootstrap-table-next": "^4.0.3",
+    "react-bootstrap-table2-filter": "^1.3.3",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^17.0.2",
+    "react-flatpickr": "^3.10.7",
+    "react-intl": "^5.20.2",
+    "react-redux": "^7.2.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-toastify": "^5.5.0",
+    "reactstrap": "^8.9.0",
+    "redux": "^4.1.0",
+    "redux-auth-wrapper": "^2.1.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-state-sync": "^2.1.0",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^4.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

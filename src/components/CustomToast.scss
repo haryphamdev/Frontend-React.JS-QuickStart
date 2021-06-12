@@ -1,0 +1,73 @@
+@import "../styles/common.scss";
+
+.toast-container {
+  .toast-item {
+    white-space: pre-wrap;
+    box-shadow: 0 0 5px 5px $box-shadow-color;
+    -webkit-box-shadow: 0 0 5px 5px $box-shadow-color;
+
+    &.Toastify__toast--success {
+      background: $common-green;
+    }
+
+    &.Toastify__toast--error {
+      background: $common-red;
+    }
+
+    &.Toastify__toast--warn {
+      background: $colormain;
+    }
+
+    &.Toastify__toast--info {
+      background: $colormain;
+    }
+
+    .toast-close {
+      position: absolute;
+      right: 10px;
+      top:10px;
+      color: $common-text-color;
+      font-size: $base-size;
+      padding: 0;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      -webkit-appearance: none;
+      transition: opacity 0.2s ease-out;
+    }
+
+    .toast-item-body {
+      color: $common-text-color;
+      display: block;
+      flex: none;
+      width: 100%;
+
+      .toast-title {
+        font-weight: bold;
+        font-size: $base-size;
+        margin: 0 20px 5px 0;
+
+        .fixed-scroll-bar {
+          height: 50px;
+        }
+        .date {
+          float: right;
+          font-size: $base-size - 2px;
+          vertical-align: middle;
+          margin-right: 5px;
+          margin-bottom: 0;
+          padding: 2px 5px;
+        }
+
+        i {
+          position: relative;
+          margin-right: 3px;
+        }
+      }
+
+      .toast-content {
+        font-size: $base-size - 2px;
+      }
+    }
+  }
+}

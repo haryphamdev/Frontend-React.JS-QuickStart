@@ -1,0 +1,44 @@
+$base-size: 16px;
+$lh: 1.313;
+$fontmain:"Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$colormain:#0071ba;
+$colorsub:#bb8d09;
+$common-text-color:white;
+$common-btn-confirm: #185ba8;
+$common-btn-deny: #bb8d09;
+$common-error: #ff9600;
+$common-notify: greenyellow;
+$common-green: #00C087;
+$common-red: #d01a1d;
+$common-white: #fff;
+$common-orange: #FFAC42;
+$border: #ccc;
+$text-in-light: #181818;
+
+$input-focus: #FFAC42;
+
+$footer-container: #f5f5f5;
+$footer-text: #262626;
+$footer-next-disable: #ccc;
+
+$bg-menu-color: #f5f5f5;
+$bg-scrollbar: #000;
+$bg-table-color: #f5f5f5;
+$box-shadow-color: #0000004d;
+
+$dropdown-image: url("../assets/images/dropdown.svg");
+
+//date picker
+$date-picker-bg: $common-white;
+$date-picker-border: darken(#3f4458, 50%);
+$date-picker-arrow-hover: $common-orange;
+$date-picker-month-fg: #000;
+$date-picker-month-bg: $common-white;
+$date-picker-weekdays-fg: #000;
+$date-picker-weekdays-bg: transparent;
+$date-picker-day-fg: #000;
+$date-picker-day-hover-bg: darken($common-white, 25%);
+$date-picker-today-border: $common-orange;
+$date-picker-today-bg: $common-orange;
+$date-picker-today-fg: #000;
+$date-picker-day-selected-fg: $common-white;

@@ -1,0 +1,34 @@
+@import "../../styles/common";
+
+.react-autosuggest__suggestions-container {
+    min-width: 90%;
+    position: absolute;
+    top: 50px;
+    z-index: 4;
+    max-height: 140px;
+    overflow: auto;
+    background: $footer-container;
+    box-shadow: 2px 2px 4px 0 $box-shadow-color;
+    -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
+}
+
+.react-autosuggest__suggestions-list {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 0px;
+}
+
+.react-autosuggest__suggestion {
+    padding: 0 5px;
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px solid $border;
+    &:hover {
+        cursor: pointer;
+        background-color: darken($footer-container, 5);
+    }
+}
+
+.react-autosuggest__suggestion--highlighted {
+    background-color: darken($footer-container, 5);
+}

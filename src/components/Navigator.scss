@@ -1,0 +1,96 @@
+@import "../styles/common.scss";
+
+.navigator-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    &.list-unstyled,
+    .list-unstyled {
+        list-style-type: none;
+    }
+    .menu-group {
+        &:hover {
+            cursor: pointer;
+            background-color: darken($colormain, 5);
+        }
+        .menu-group-name {
+            line-height: 40px;
+            padding: 0 15px;
+            border-right: 1px solid $border;
+            &:first-child {
+                border-left: 1px solid $border;
+            }
+        }
+        .menu-list {
+            display: none;
+            background-color: $bg-menu-color;
+            box-shadow: 2px 2px 4px 0 $box-shadow-color;
+            -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
+            color: $text-in-light;
+            position: absolute;
+            padding: 0;
+            .menu {
+                width: 205px;
+                padding: 0 15px;
+                height: 35px;
+                line-height: 35px;
+                text-transform: none;
+                .menu-link {
+                    text-decoration: none;
+                    color: $text-in-light;
+                }
+                .sub-menu-list {
+                    display: none;
+                    background-color: $bg-menu-color;
+                    box-shadow: 2px 2px 4px 0 $box-shadow-color;
+                    -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
+                    position: absolute;
+                    top: 0;
+                    left: 205px;
+                    padding: 0;
+                    .sub-menu {
+                        padding: 0 15px;
+                        height: 35px;
+                        line-height: 35px;
+                        white-space: nowrap;
+                        &:hover {
+                            background-color: darken($bg-menu-color, 5);
+                        }
+                        .sub-menu-link {
+                            text-decoration: none;
+                            color: $text-in-light;
+                        }
+                        a {
+                            display: block;
+                        }
+                        &.active a {
+                            font-weight: 500;
+                            color: $colormain;
+                        }
+                    }
+                }
+                &.active span {
+                    font-weight: 500;
+                    color: $colormain;
+                }
+                &:hover {
+                    background-color: darken($bg-menu-color, 3);
+                    .sub-menu-list {
+                        display: block;
+                    }
+                }
+                .icon-right {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                }
+            }
+        }
+        &:hover {
+            .menu-list {
+                display: block;
+            }
+        }
+    }
+}

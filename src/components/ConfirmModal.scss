@@ -1,0 +1,36 @@
+@import "../styles/common";
+
+.confirm-modal {
+  &.modal-dialog {
+    @media (min-width: 766px) {
+      min-width: 650px;
+    }
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid $border;;
+    width: 100%;
+    margin: 10px 15px 5px 15px;
+  }
+
+  .btn-container {
+    margin-top: 10px;
+    .btn {
+      width: 100px;
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  .custom-form-group {
+    margin: 5px 0;
+
+    .custom-form-control.readonly {
+      min-height: 28px;
+      height: auto;
+    }
+  }
+}
+

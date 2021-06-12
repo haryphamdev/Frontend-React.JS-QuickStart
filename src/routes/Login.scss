@@ -1,0 +1,238 @@
+@import "../styles/common.scss";
+
+.login-wrapper {
+    .form-signin input[type=email],
+    .form-signin input[type=password],
+    .form-signin input[type=text],
+    .form-signin button {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        height: 55px;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .form-signin .form-control:focus {
+        border-color: rgb(104, 145, 162);
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+        outline: 0;
+    }
+
+    .login-container {
+        height: 100vh;
+        margin: auto 0 auto auto;
+        padding: auto;
+        width: 100%;
+    }
+    //huy.quang: disable default eye icon on ie < 10
+    input::-ms-reveal,
+    input::-ms-clear
+    {
+        display: none;
+    }
+    .login-container {
+        padding: 100px 0 0 0;
+    }
+    .form_login {
+        background: $colormain;
+        border:none;
+        border-radius: 8px; -webkit-border-radius:8px;
+        height: 475px;
+        margin: 50px auto 0;
+        max-width: 470px;padding: 20px 50px;
+        padding: 20px 50px;
+        .title {
+            color: $common-text-color;
+            background-color: transparent;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.4;
+            margin: 20px 0 20px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .error-msg {
+            color:$common-error;
+            margin-top:10px;
+            text-align: center
+        }
+        .notify-msg {
+            color:$common-notify;
+            margin-top:10px;
+            text-align: center
+        }
+        .form-group {
+            input[type=submit], input[type=button] {
+                &:focus, &:hover {
+                    background: $common-btn-deny;
+                    border: 1px solid $common-btn-deny;
+                    filter: brightness(120%);
+                }
+            }
+            margin-bottom:20px;
+            position: relative;
+            &.separator {
+                background: $common-text-color;
+                border: none;
+                height: 1px;
+                padding: 0 50px;
+            }
+            .form-control{
+                background: $common-text-color;
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                box-sizing: border-box;
+                color: rgba(0,0,0,0.8);
+                height: 40px;
+                margin-bottom: 0;     
+                &:focus, &:hover{
+                    border: 3px solid $input-focus;
+                }
+            }
+            &.icon-true {
+                .form-control {
+                    background: $common-text-color;
+                    padding-left: 40px;
+                    width: 100%;
+                }
+                .icon {
+                    left: 0;
+                    position: absolute;top: 0;
+                }
+            }
+            .error {
+                display: none;
+                text-align: right
+            } 
+        }
+        .login{
+            .btn{
+                background: $common-btn-confirm;
+                color: #fff;
+                display: block;
+                font-size: 14px;
+                height: 40px;
+                margin-bottom: 13px;
+                width: 100%;
+                &.dn {
+                    background: $common-btn-confirm;
+                }
+                &.dk {
+                    background: $common-btn-confirm;
+                }
+            }
+        }
+    } 
+    .login-error {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        .login-error-message {
+            color: $common-error;
+        }
+    }
+    
+    /*=============END FOOTER==========*/
+    
+    /*=============MENU MOBILE==========*/
+    /*=============END MENU MOBILE==========*/
+    
+    /*RESPONSIVE*/
+    @media screen and (min-device-width: 1280px) and (max-device-width: 2400px) {
+        .login-container {
+            padding: 30px 0 0 0;
+        }
+    }
+    @media (max-width: 1600px){
+        .login-container {
+            padding: 100px 0 0 0;
+        }
+        .form_login{
+            height: 475px;
+            max-width: 360px;
+            .form-group {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media (max-width: 1479px){
+        .login-container {
+            padding: 80px 0 0 0;
+        }
+        .form_login{
+            height: 475px;
+            max-width: 360px;
+            .form-group {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media (max-width: 1380px){
+        .form_login{
+            height: 475px;
+            max-width: 360px;
+            .form-group {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media (max-width: 1280px){
+        .login-container {
+            padding: 30px 0 0 0;
+        }
+        .form_login{
+            height: 475px;
+            max-width: 360px;
+            .form-group {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media (max-width: 960px){
+        .form_login {
+            margin: auto
+        }
+        .login-container {
+            padding: 40px 30px 0 30px;
+        }
+    }
+    
+    @media (max-width: 740px){
+        .form_login {
+            margin: auto
+        }
+        .login-container {
+            padding: 40px 30px 0 30px;
+        }
+    }
+    
+    @media (max-width: 590px){
+        .form_login{
+            margin: auto
+        }
+        .login-container {
+            padding: 40px 30px 0 30px;
+        }
+    }
+    @media (max-width: 420px){
+        .form_login{
+            margin: auto
+        }
+        .login-container {
+            padding: 40px 30px 0 30px;
+        }
+    }
+    @media (max-width: 340px){
+        .form_login{
+            margin: auto
+        }
+        .login-container {
+            padding: 40px 30px 0 30px;
+        }
+    }
+}
