@@ -3,7 +3,7 @@ import _ from 'lodash';
 import config from './config';
 
 const instance = axios.create({
-    baseURL:  config.api.API_BASE_URL,
+    baseURL: process.env.REACT_APP_BACKEND_URL,
     withCredentials: true
 });
 

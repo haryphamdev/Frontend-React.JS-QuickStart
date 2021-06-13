@@ -66,7 +66,12 @@ class Login extends Component {
 
         adminLoginSuccess(adminInfo);
         this.refresh();
-        this.redirectToSystemPage()
+        this.redirectToSystemPage();
+        try {
+            adminService.login(loginBody)
+        } catch (e) {
+            console.log('error login : ', e)
+        }
 
     }
 

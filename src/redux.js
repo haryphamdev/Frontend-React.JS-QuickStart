@@ -3,18 +3,21 @@ import thunkMiddleware from "redux-thunk";
 import { routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 
-import {createStore, applyMiddleware, compose} from 'redux';
-import { createStateSyncMiddleware} from 'redux-state-sync';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { createStateSyncMiddleware } from 'redux-state-sync';
 import { persistStore } from 'redux-persist';
 
 import createRootReducer from './store/reducers/rootReducer';
 import actionTypes from './store/actions/actionTypes';
 
-import config from './config';
-
 const environment = process.env.NODE_ENV || "development";
-const isDevelopment = environment === "development";
-export const history = createBrowserHistory({ basename: config.app.ROUTER_BASE_NAME});
+let isDevelopment = environment === "development";
+
+//hide redux logs
+isDevelopment = false;
+
+
+export const history = createBrowserHistory({ basename: process.env.REACT_APP_ROUTER_BASE_NAME });
 
 const reduxStateSyncConfig = {
     whitelist: [
