@@ -3,11 +3,16 @@
     background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 
     .login-container {
-        width: 400px;
-        height: 100%;
-        margin: 0 auto;
+        width: 350px;
+        height: 450px;
+        margin: auto;
         border-radius: 10px;
         background-color: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
 
         .login-content{
             padding: 10px;
@@ -21,6 +26,17 @@
 
             .login-input{
                 margin: 8px 0;
+
+                .custom-input-password{
+                    position: relative;
+
+                    i{
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        cursor: pointer;
+                    }
+                }
             }
 
             .btn-login{

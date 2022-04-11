@@ -1,5 +1,5 @@
 {
-  "name": "react-app-hoi-dan-it",
+  "name": "react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
     "connected-react-router": "^6.9.1",
+    "cors": "^2.8.5",
     "lodash": "^4.17.21",
     "moment": "^2.29.0",
     "node-sass": "^6.0.0",
