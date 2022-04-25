@@ -2,18 +2,25 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss';
-import {getAllUsers} from '../../services/userService';
+import {getAllUsers, createNewUserService} from '../../services/userService';
+import ModalUser from './ModalUser';
+import { reject } from 'lodash';
 
 class UserManage extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            arrUsers: []
+            arrUsers: [],
+            isOpenModalUser: false,
         }
     }
 
     async componentDidMount() {
+        await this.getAllUsersFromReact();
+    }
+
+    getAllUsersFromReact = async () =>{
         let response = await getAllUsers('All');
         if(response && response.errCode === 0){
             this.setState({
@@ -22,14 +29,57 @@ class UserManage extends Component {
         }
     }
 
+    handleAddNewUser = ()=>{
+        this.setState({
+            isOpenModalUser: true,
+        })
+    }
+
+    toggleUserModal = () =>{
+        this.setState({
+            isOpenModalUser: !this.state.isOpenModalUser,
+        })
+    }
+
+    createNewuser = async (data)=>{
+        try{
+            let response = await createNewUserService(data);
+            if(response && response.errCode !== 0){
+                alert(response.errMessage)
+            } else{
+                await this.getAllUsersFromReact();
+                this.setState({
+                    isOpenModalUser: false
+                })
+                
+            }
+        }
+        catch(e){
+            console.log(e)
+        }
+    }
+
 
     render() {
         let arrUsers = this.state.arrUsers;
         return (
             <div className="users-container">
+                <ModalUser
+                    isOpen={this.state.isOpenModalUser}
+                    toggleFromParent = {this.toggleUserModal}
+                    createNewuser = {this.createNewuser}
+                    />
                 <div className='title text-center'>Manage users:</div>
+                <div className='mx-1'>
+                    <button
+                        className='btn btn-primary px-3'
+                        onClick={()=> this.handleAddNewUser()}
+                        ><i className='fas fa-plus'></i> Add new user</button>
+                    </div>
                 <div className='users-table mt-3 mx-1'>
                     <table id='customers'>
+                        <tbody>
+                            
                         <tr>
                             <th>Email</th>
                             <th>First Name</th>
@@ -53,6 +103,8 @@ class UserManage extends Component {
                             )
                         })
                         }
+                        
+                        </tbody>
                     </table>
                 </div>
             </div>
