@@ -18,6 +18,7 @@ import System from '../routes/System';
 
 import { CustomToastCloseButton } from '../components/CustomToast';
 import ConfirmModal from '../components/ConfirmModal';
+import HomePage from './HomePage/HomePage.js';
 
 class App extends Component {
 
